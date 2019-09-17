@@ -28,6 +28,9 @@ def distance(Trig,Echo):
 	print "stop"
 	return dis
 while 1:
+	print (distance(12,16))
+'''
+while 1:
 	if distance(8,10) < 10:
 		GPIO.output(in3,GPIO.HIGH)
         	GPIO.output(in3,GPIO.LOW)
@@ -74,6 +77,7 @@ while 1:
         	GPIO.output(in2,GPIO.HIGH)
 		GPIO.output(in4,GPIO.LOW)
         	GPIO.output(in4,GPIO.HIGH)
+'''
 GPIO.cleanup()
 
 
