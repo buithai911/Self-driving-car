@@ -51,49 +51,49 @@ sda = 3
 while True:
 	if GPIO.input(s1):#left
 		GPIO.output(in1,GPIO.HIGH)
-       	GPIO.output(in1,GPIO.LOW)
-       	time.sleep(1)
-       	#forward
-       	GPIO.output(in1,GPIO.HIGH)
-	    GPIO.output(in1,GPIO.LOW)
+		time.sleep(1)
+       		GPIO.output(in1,GPIO.LOW)
+       		#forward
+       		GPIO.output(in1,GPIO.HIGH)
+	    	GPIO.output(in1,GPIO.LOW)
 	 	GPIO.output(in3,GPIO.HIGH)
-	    GPIO.output(in3,GPIO.LOW)
+	    	GPIO.output(in3,GPIO.LOW)
 
 	if GPIO.input(s2):
 		GPIO.output(in1,GPIO.HIGH)
-       	GPIO.output(in1,GPIO.LOW)
-       	time.sleep(1)
-       	#forward
-       	GPIO.output(in1,GPIO.HIGH)
-	    GPIO.output(in1,GPIO.LOW)
+       		GPIO.output(in1,GPIO.LOW)
+       		time.sleep(1)
+       		#forward
+       		GPIO.output(in1,GPIO.HIGH)
+	    	GPIO.output(in1,GPIO.LOW)
 	 	GPIO.output(in3,GPIO.HIGH)
-	    GPIO.output(in3,GPIO.LOW)
+	    	GPIO.output(in3,GPIO.LOW)
 
 	if GPIO.input(s3):#forward
 		GPIO.output(in1,GPIO.HIGH)
-	    GPIO.output(in1,GPIO.LOW)
+	    	GPIO.output(in1,GPIO.LOW)
 	 	GPIO.output(in3,GPIO.HIGH)
-	    GPIO.output(in3,GPIO.LOW)
+	    	GPIO.output(in3,GPIO.LOW)
 
 	if GPIO.input(s4):#right
 		GPIO.output(in3,GPIO.HIGH)
-       	GPIO.output(in3,GPIO.LOW)
-       	time.sleep(1)
-       	#forward
-       	GPIO.output(in1,GPIO.HIGH)
-	    GPIO.output(in1,GPIO.LOW)
+       		GPIO.output(in3,GPIO.LOW)
+       		time.sleep(1)
+       		#forward
+       		GPIO.output(in1,GPIO.HIGH)
+	    	GPIO.output(in1,GPIO.LOW)
 	 	GPIO.output(in3,GPIO.HIGH)
-	    GPIO.output(in3,GPIO.LOW)
+	    	GPIO.output(in3,GPIO.LOW)
 
 	if GPIO.input(s5):
 		GPIO.output(in3,GPIO.HIGH)
-       	GPIO.output(in3,GPIO.LOW)
-       	time.sleep(1)
-       	#forward
-       	GPIO.output(in1,GPIO.HIGH)
-	    GPIO.output(in1,GPIO.LOW)
+       		GPIO.output(in3,GPIO.LOW)
+       		time.sleep(1)
+       		#forward
+       		GPIO.output(in1,GPIO.HIGH)
+	    	GPIO.output(in1,GPIO.LOW)
 	 	GPIO.output(in3,GPIO.HIGH)
-	    GPIO.output(in3,GPIO.LOW)
+	    	GPIO.output(in3,GPIO.LOW)
 GPIO.cleanup()
 
 
