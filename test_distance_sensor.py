@@ -30,50 +30,50 @@ def distance(Trig,Echo):
 while 1:
 	if distance(8,10) < 10:
 		GPIO.output(in3,GPIO.HIGH)
-        GPIO.output(in3,GPIO.LOW)
-        time.sleep(1)
-    if distance(18,22) < 10:
-    	GPIO.output(in1,GPIO.HIGH)
-        GPIO.output(in1,GPIO.LOW)
-        time.sleep(1)
-    if distance(8,10) < 5 and distance(18,22) < 5 and distance(12,16) > 10:
-    	GPIO.output(in2,GPIO.LOW)
-        GPIO.output(in2,GPIO.HIGH)
-		GPIO.output(in4,GPIO.LOW)
-        GPIO.output(in4,GPIO.HIGH)
-        time.sleep(2)
-        GPIO.output(in3,GPIO.HIGH)
-        GPIO.output(in3,GPIO.LOW)
-		GPIO.output(in2,GPIO.LOW)
-        GPIO.output(in2,GPIO.HIGH)
-        time.sleep(1)
-    if distance(12,16) < 10:
-    	if distane(8,10) < distane(18,22):
-    		GPIO.output(in3,GPIO.HIGH)
         	GPIO.output(in3,GPIO.LOW)
-        elif distane(8,10) < distane(18,22):
-        	GPIO.output(in1,GPIO.HIGH)
+        	time.sleep(1)
+    	if distance(18,22) < 10:
+    		GPIO.output(in1,GPIO.HIGH)
         	GPIO.output(in1,GPIO.LOW)
-        else
+        	time.sleep(1)
+    	if distance(8,10) < 5 and distance(18,22) < 5 and distance(12,16) > 10:
+    		GPIO.output(in2,GPIO.LOW)
+       		GPIO.output(in2,GPIO.HIGH)
+		GPIO.output(in4,GPIO.LOW)
+        	GPIO.output(in4,GPIO.HIGH)
+        	time.sleep(2)
         	GPIO.output(in3,GPIO.HIGH)
         	GPIO.output(in3,GPIO.LOW)
+		GPIO.output(in2,GPIO.LOW)
+        	GPIO.output(in2,GPIO.HIGH)
+        	time.sleep(1)
+    	if distance(12,16) < 10:
+    		if distane(8,10) < distane(18,22):
+    			GPIO.output(in3,GPIO.HIGH)
+        		GPIO.output(in3,GPIO.LOW)
+        	elif distane(8,10) < distane(18,22):
+        		GPIO.output(in1,GPIO.HIGH)
+        		GPIO.output(in1,GPIO.LOW)
+        	else
+        		GPIO.output(in3,GPIO.HIGH)
+        		GPIO.output(in3,GPIO.LOW)
 	if distance(12,16) < 10 and distance(18,22) < 10:
 		GPIO.output(in1,GPIO.HIGH)
-        GPIO.output(in1,GPIO.LOW)
+        	GPIO.output(in1,GPIO.LOW)
 		GPIO.output(in3,GPIO.LOW)
-        GPIO.output(in3,GPIO.HIGH)
-        time.sleep(1)
+        	GPIO.output(in3,GPIO.HIGH)
+        	time.sleep(1)
 	if distance(12,16) < 10 and distance(8,10) < 10:
 		GPIO.output(in3,GPIO.HIGH)
-        GPIO.output(in3,GPIO.LOW)
+        	GPIO.output(in3,GPIO.LOW)
 		GPIO.output(in2,GPIO.LOW)
-        GPIO.output(in2,GPIO.HIGH)
-        time.sleep(1)
+        	GPIO.output(in2,GPIO.HIGH)
+        	time.sleep(1)
 	if distance(12,16) < 8 and distance(8,10) < 8 and distance(18,22) < 8:
 		GPIO.output(in2,GPIO.LOW)
-        GPIO.output(in2,GPIO.HIGH)
+        	GPIO.output(in2,GPIO.HIGH)
 		GPIO.output(in4,GPIO.LOW)
-        GPIO.output(in4,GPIO.HIGH)
+        	GPIO.output(in4,GPIO.HIGH)
 GPIO.cleanup()
 
 
