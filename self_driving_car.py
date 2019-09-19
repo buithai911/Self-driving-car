@@ -53,12 +53,12 @@ while True:
 		if GPIO.input(s2):
 			turnleft(1)
 			forward(2)
-		if GPIO.input(s3):#forward
+		if GPIO.input(s3):
 			forward(1)
-		if GPIO.input(s4):# turn right
+		if GPIO.input(s4):
 			turnright(1)
 			forward(2)
-		if GPIO.input(s5):# turn right
+		if GPIO.input(s5):
 			turnright(1)
 			forward(2)
 	else
