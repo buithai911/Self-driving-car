@@ -47,53 +47,28 @@ sda = 3
 #main
 while True:
 	if distance(12,16)>10:
-		if GPIO.input(s1):# turn left
-			GPIO.output(in1,GPIO.HIGH)
-			time.sleep(1)
-			GPIO.output(in1,GPIO.LOW)
-			#forward
-			GPIO.output(in1,GPIO.HIGH)
-			GPIO.output(in1,GPIO.LOW)
-			GPIO.output(in3,GPIO.HIGH)
-			GPIO.output(in3,GPIO.LOW)
-
-		if GPIO.input(s2):# turn left
-			GPIO.output(in1,GPIO.HIGH)
-			time.sleep(1)
-			GPIO.output(in1,GPIO.LOW)
-			#forward
-			GPIO.output(in1,GPIO.HIGH)
-			GPIO.output(in1,GPIO.LOW)
-			GPIO.output(in3,GPIO.HIGH)
-			GPIO.output(in3,GPIO.LOW)
-
+		if GPIO.input(s1):
+			turnleft(1)
+			forward(2)
+		if GPIO.input(s2):
+			turnleft(1)
+			forward(2)
 		if GPIO.input(s3):#forward
-			GPIO.output(in1,GPIO.HIGH)
-			GPIO.output(in1,GPIO.LOW)
-			GPIO.output(in3,GPIO.HIGH)
-			GPIO.output(in3,GPIO.LOW)
-
+			forward(1)
 		if GPIO.input(s4):# turn right
-			GPIO.output(in3,GPIO.HIGH)
-			time.sleep(1)
-			GPIO.output(in3,GPIO.LOW)
-			#forward
-			GPIO.output(in1,GPIO.HIGH)
-			GPIO.output(in1,GPIO.LOW)
-			GPIO.output(in3,GPIO.HIGH)
-			GPIO.output(in3,GPIO.LOW)
-
+			turnright(1)
+			forward(2)
 		if GPIO.input(s5):# turn right
-			GPIO.output(in3,GPIO.HIGH)
-			GPIO.output(in3,GPIO.LOW)
-			time.sleep(1)
-			#forward
-			GPIO.output(in1,GPIO.HIGH)
-			GPIO.output(in1,GPIO.LOW)
-			GPIO.output(in3,GPIO.HIGH)
-			GPIO.output(in3,GPIO.LOW)
+			turnright(1)
+			forward(2)
 	else
-		if distance(8,10)>distance(18,22)
+		if distance(8,10) < 10 and distance(18,22) < 10:
+			backward(3)
+			turnleft(3)
+			forward(3)
+			turnright(3)
+			forward(3)
+		elif distance(8,10) > distance(18,22)
 			turnleft(2)
 			forward(2)
 			turnright(2)
