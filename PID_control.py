@@ -19,7 +19,7 @@ for i in Encoder_pins:
         GPIO.setup(i, GPIO.IN)
 GPIO.setup(23, GPIO.IN)
 # Khai báo biến
-Kp = 20 Ki = 10 Kd = 10
+Kp = 0 Ki = 0 Kd = 0
 error = 0 P = 0 I = 0 D = 0 PID_value = 0
 previous_error = 0 previous_I = 0
 s1 = GPIO.input(7)
@@ -58,21 +58,18 @@ def read_ir_sensor():
                 error = -4
 def calculatePID():
         P = error
-        I = I + error
+        I = I + previous_I
         D = error-previous_error
         PID_value = (Kp*P) + (Ki*I) + (Kd*D)
         previous_error = error
+        previous_I = I
 def motorPIDcontrol():
-        int DCleft = 50 - PID_value
-        int DCright = 50 + PID_value
+        int DCleft = 100 - PID_value
+        int DCright = 100 + PID_value
         if (DCleft > 100) 
                 DCleft = 100
         if (DCright > 100) 
                 DCright = 100
-        if (DCleft < 50) 
-                DCleft = 50 
-        if (DCright < 50) 
-                DCright = 50
         p2.ChangeDutyCycle(0)
         p1.ChangeDutyCycle(DCleft)
         p3.ChangeDutyCycle(0)
@@ -107,10 +104,10 @@ p2 = GPIO.PWM(37, 1000)
 p3 = GPIO.PWM(38, 1000)
 p4 = GPIO.PWM(40, 1000)
 
-p1.start(0)
-p2.start(0)
-p3.start(0)
-p4.start(0)
+p1.start(100)
+p2.start(100)
+p3.start(100)
+p4.start(100)
 
 while (1):
         read_ir_sensor()
